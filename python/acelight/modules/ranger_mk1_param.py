@@ -168,6 +168,7 @@ temperature           = Parameter(
                             access="Read Only")
 
 
+
 # Diagnostics and calibration (0xC0–0xDF) -----------------------------------------------------
 calibration           = Parameter(id=0xC0, data_type="U8", description="", unit="", access="")
 led1                  = Parameter(id=0xC1, data_type="U8", description="", unit="", access="")
