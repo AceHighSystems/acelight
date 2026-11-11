@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: acelight
-Version: 0.0.0a2
+Version: 0.0.0a1
 Summary: Python client for the AceLight CAN protocol
 Author-email: "Tor K. Gjerde" <tor@ace-high.com>
 License-Expression: MIT
@@ -15,7 +15,7 @@ Dynamic: license-file
 
 # AceLight
 
-Python client for the AceLight CAN protocol, developed by [AceHigh ApS](https://ace-high.com).
+Python client for the AceLight CAN protocol, developed by [AceHigh ApS](https://ace-high.com).<br>
 For more information and documentation of the protocol please visit [acelight](https://ace-high.com/acelight).
 
 Start commanding stepper motors with the Ranger Mk1 module and acelight.
@@ -28,7 +28,7 @@ This is an alpha release. The API and device parameter tables may change.
 ## Requirements
 
 - Python 3.9 or newer.
-- A CAN adapter supported by `python-can`. The example below uses SLCAN over a serial port. The CANable 2.0 CAN analyzer USB to CAN adapter has been tested.
+- A CAN adapter supported by `python-can`. The example below uses SLCAN over a serial port. The CANable 2.0 CAN analyzer USB to CAN adapter has been tested and confirmed working on Mac OS.
 - A hardware module running compatible AceLight firmware. Parameter IDs and data types must match the device firmware. See the specific device datasheet for complete list of parameters.
 
 The package dependency `python-can[serial]` includes the serial support used by the example. Other CAN interfaces may require their own drivers or dependencies.
@@ -75,7 +75,7 @@ with can.Bus(interface="slcan",
     ace = acelight.Client(HOST_ID, bus)
 
     status = ace.write(NODE_ID, r.profile_velocity, 10000) # set steps/second 
-    print(f"Write status: 0x{status:02X}") # status code 0x01 means write was accepted by the module - see documentation for all possible status codes
+    print(f"Write status: 0x{status:02X}") # status code 0x01 means write was accepted by the HW module
 
     for i in range(5):
         status, temperature = ace.read(NODE_ID, r.temperature) # read temperature, units in milli degrees.

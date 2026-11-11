@@ -1,6 +1,6 @@
 # AceLight
 
-Python client for the AceLight CAN protocol, developed by [AceHigh ApS](https://ace-high.com).
+Python client for the AceLight CAN protocol, developed by [AceHigh ApS](https://ace-high.com).<br>
 For more information and documentation of the protocol please visit [acelight](https://ace-high.com/acelight).
 
 Start commanding stepper motors with the Ranger Mk1 module and acelight.
