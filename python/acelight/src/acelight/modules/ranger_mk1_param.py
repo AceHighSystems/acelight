@@ -1,4 +1,6 @@
 
+# First revision Ranger Mk1 parameter table - Nov. 11 - 2026
+
 from ..parameter import Parameter
 
 # AceLight standard module parameters --------------------------------------------------------------------------
@@ -52,7 +54,7 @@ protocol_version      = Parameter(
                             access="Read Only")
 
 # Ranger Mk1 module specific parameters  
-# Motion (0x40–0x5F) --------------------------------------------------------------------------------------------------
+# Motion parameters (0x40–0x5F) --------------------------------------------------------------------------------------------------
 mode                  = Parameter(
                             id=0x40, 
                             data_type="U8", 
@@ -143,7 +145,7 @@ motor_full_step       = Parameter(
                             unit="full step / full revolution", 
                             access="Read and Write")
 
-#  Telemetry (0x80–0x9F) ---------------------------------------------------------------------------------
+#  Telemetry parameters (0x80–0x9F) ---------------------------------------------------------------------------------
 voltage               = Parameter(
                             id=0x80, 
                             data_type="I32",
@@ -169,7 +171,7 @@ temperature           = Parameter(
 
 
 
-# Diagnostics and calibration (0xC0–0xDF) -----------------------------------------------------
+# Diagnostics and calibration parameters (0xC0–0xDF) -----------------------------------------------------
 calibration           = Parameter(id=0xC0, data_type="U8", description="", unit="", access="")
 led1                  = Parameter(id=0xC1, data_type="U8", description="", unit="", access="")
 uptime                = Parameter(id=0xC2, data_type="U32", description="", unit="", access="")
